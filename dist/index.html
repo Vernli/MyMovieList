@@ -23,13 +23,13 @@
   </head>
 
   <body>
-    <header class="h-[75vh] bg-black">
+    <header class="h-[75vh]">
       <!-- Navigation Wrapper -->
       <div class="flex flex-col w-screen">
         <!-- Navigation Menu -->
         <nav
-          id="menu-up"
-          class="flex justify-between fixed p-6 text-gray-100 w-full z-50"
+          id="menu"
+          class="flex justify-between p-6 text-gray-100 w-full z-50 fixed"
         >
           <!-- Interactive -->
           <div class="space-x-4 ml-7">
@@ -47,18 +47,15 @@
         </nav>
       </div>
 
-      <!-- Hero -->
-      <div class="relative h-full">
-        <img
-          id="hero"
-          src="./images/hero.jpg"
-          alt=""
-          class="h-full w-full object-cover"
-        />
+      <!-- Hero -- New Movies-->
+      <div
+        id="hero"
+        class="relative parralax bg-[url('../images/hero.jpg')] border-b-1 border-black shadow-md shadow-black"
+      >
         <!-- Description -->
         <div
           id="descirption"
-          class="absolute left-12 bottom-16 space-y-4 text-left text-white tracking-widest w-[30vw]"
+          class="absolute left-12 bottom-16 space-y-4 text-left text-white tracking-widest w-[30vw] z-10"
         >
           <h1 id="title" class="font-bold text-5xl">John Wick Chapter 4</h1>
           <h2 id="category" class="font-semibold text-2xl">Movie</h2>
@@ -75,7 +72,7 @@
         </div>
         <!-- Buttons -->
         <div
-          class="absolute left-0 bottom-0 right-0 flex justify-center items-center text-white text-3xl font-semibold tracking-wider space-x-5 mb-5"
+          class="absolute left-0 bottom-0 right-0 flex justify-center items-center text-white text-3xl font-semibold tracking-wider space-x-5 mb-5 z-10"
         >
           <div class="flex flex-col">
             <a href="">Movies</a>
@@ -88,5 +85,29 @@
         </div>
       </div>
     </header>
+
+    <main class="mt-20">
+      <!-- Popular -->
+      <h1 class="text-white p-5 font-semibold text-4xl text-center">
+        Top 5 Movies
+      </h1>
+      <div class="w-full p-5 flex items-center justify-center space-x-5">
+        <div class="hover:scale-105 duration-200">
+          <img src="./images/image.jpg" alt="" />
+        </div>
+        <div class="hover:scale-105 duration-200">
+          <img src="./images/image.jpg" alt="" />
+        </div>
+        <div class="hover:scale-105 duration-200">
+          <img src="./images/image.jpg" alt="" />
+        </div>
+        <div class="hover:scale-105 duration-200">
+          <img src="./images/image.jpg" alt="" />
+        </div>
+        <div class="hover:scale-105 duration-200">
+          <img src="./images/image.jpg" alt="" />
+        </div>
+      </div>
+    </main>
   </body>
 </html>
