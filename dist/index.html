@@ -4,12 +4,89 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="./assets/css/brands.css" />
+    <link rel="stylesheet" href="./assets/css/solid.css" />
     <!-- Style -->
     <link rel="stylesheet" href="./styles/output.css" />
-    <script src="./script.js"></script>
-    <title>Hello, World</title>
+    <!-- Script -->
+    <script src="./script.js" defer></script>
+    <title>MyMovieList</title>
   </head>
+
   <body>
-    <h1 class="text-red-500 text-2xl">It's Template</h1>
+    <header class="h-[75vh] bg-black">
+      <!-- Navigation Wrapper -->
+      <div class="flex flex-col w-screen">
+        <!-- Navigation Menu -->
+        <nav
+          id="menu-up"
+          class="flex justify-between fixed p-6 text-gray-100 w-full z-50"
+        >
+          <!-- Interactive -->
+          <div class="space-x-4 ml-7">
+            <button id="menu-btn">
+              <i class="fa-solid fa-bars fa-2x"></i>
+            </button>
+            <button id="search-btn">
+              <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+            </button>
+          </div>
+          <!-- User -->
+          <button id="user-btn" class="mr-7">
+            <i class="fa-solid fa-user-tie fa-2x"></i>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Hero -->
+      <div class="relative h-full">
+        <img
+          id="hero"
+          src="./images/hero.jpg"
+          alt=""
+          class="h-full w-full object-cover"
+        />
+        <!-- Description -->
+        <div
+          id="descirption"
+          class="absolute left-12 bottom-16 space-y-4 text-left text-white tracking-widest w-[30vw]"
+        >
+          <h1 id="title" class="font-bold text-5xl">John Wick Chapter 4</h1>
+          <h2 id="category" class="font-semibold text-2xl">Movie</h2>
+          <p id="information" class="w-[25vw]">
+            With the price on his head ever increasing, John Wick uncovers a
+            path to defeating The High Table.
+          </p>
+          <!-- Buttons -->
+          <button
+            class="bg-gray-800 bg-opacity-95 rounded-full p-3 font-semibold text-lg hover:-translate-y-1 duration-500"
+          >
+            More Information
+          </button>
+        </div>
+        <!-- Buttons -->
+        <div
+          class="absolute left-0 bottom-0 right-0 flex justify-center items-center text-white text-3xl font-semibold tracking-wider space-x-5 mb-5"
+        >
+          <div class="flex flex-col">
+            <a href="">Movies</a>
+            <div class="active"></div>
+          </div>
+          <div class="flex flex-col">
+            <a href="">TV Shows</a>
+            <div class=""></div>
+          </div>
+        </div>
+      </div>
+    </header>
   </body>
 </html>
