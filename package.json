@@ -7,7 +7,8 @@
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/styles/output.css",
     "minify-js": "minify ./dist/script.js > ./dist/script.min.js",
     "minify": "npx tailwindcss -i ./src/input.css -o ./dist/styles/output.css --minify",
-    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/styles/output.css --watch"
+    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/styles/output.css --watch",
+    "git-push": "git push -u origin main"
   },
   "keywords": [],
   "author": "",
