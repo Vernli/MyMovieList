@@ -1,0 +1,22 @@
+{
+  "name": "ready-environment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/styles/output.css",
+    "minify-js": "minify ./dist/script.js > ./dist/script.min.js",
+    "minify": "npx tailwindcss -i ./src/input.css -o ./dist/styles/output.css --minify",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/styles/output.css --watch",
+    "git-push": "git push -u origin main"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0"
+  }
+}

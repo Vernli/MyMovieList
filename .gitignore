@@ -1,5 +1,3 @@
 node_modules/
 src/
-*.json
-tailwind.config.js
 .DS_Store
