@@ -32,13 +32,16 @@
           class="flex justify-between p-6 text-gray-100 w-full z-50 fixed"
         >
           <!-- Interactive -->
-          <div id="left-menu-elements" class="space-x-4 ml-7">
+          <div id="left-menu-elements" class="space-x-4 ml-7 flex">
             <button id="menu-btn">
               <i class="fa-solid fa-bars fa-2x"></i>
             </button>
             <button id="search-btn">
               <i class="fa-solid fa-magnifying-glass fa-2x"></i>
             </button>
+            <form action="./search.html" id="search-form">
+              <button type="submit" id="search-submit" class="hidden"></button>
+            </form>
           </div>
 
           <div class="flex space-x-3 tracking-wider text-white">
