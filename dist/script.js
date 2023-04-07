@@ -1,24 +1,29 @@
 const searchBtn = document.querySelector("#search-btn");
 
 const global = {
-  APIKey: "37ec4365f037f62ba3e0b8a374c29636",
-  APIUrl: "https://api.themoviedb.org/3/",
+  api: {
+    APIKey: "37ec4365f037f62ba3e0b8a374c29636",
+    APIUrl: "https://api.themoviedb.org/3/",
+  },
 };
 
-async function fetchAPI(endpoint) {
-  const APIKey = global.APIKey;
-  const APIUrl = global.APIUrl;
+async function fetchAPIData(endpoint) {
+  const APIKey = global.api.APIKey;
+  const APIUrl = global.api.APIUrl;
 
-  const response = fetch(
+  const response = await fetch(
     `${APIUrl}${endpoint}?api_key=${APIKey}&language=en-US`
   );
-
-  const data = await response.json;
+  const data = await response.json();
   return data;
 }
 
-function displayBackgroundImage() {
-  console.log(fetchAPI("movie"));
+async function displayBackgroundImage() {
+  const { results } = await fetchAPIData("movie/popular");
+  console.log(results);
+  const hero = document.querySelector("#hero");
+  hero.style.backgroundImage = `url('https://image.tmdb.org/t/p/original${results[0].backdrop_path}')`;
+  console.log(results[0].backdrop_path);
 }
 
 displayBackgroundImage();

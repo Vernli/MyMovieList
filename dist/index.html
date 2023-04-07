@@ -16,8 +16,10 @@
     <link rel="stylesheet" href="./assets/css/brands.min.css" />
     <link rel="stylesheet" href="./assets/css/solid.min.css" />
     <!-- Style -->
+    <link rel="stylesheet" href="./swiper/swiper.css" />
     <link rel="stylesheet" href="./styles/output.css" />
     <!-- Script -->
+    <script src="./swiper/swiper.js"></script>
     <script src="./script.js" defer></script>
     <title>MyMovieList</title>
   </head>
@@ -64,7 +66,7 @@
       <!-- Hero -- New Movies-->
       <div
         id="hero"
-        class="relative parralax bg-[url('../images/hero.jpg')] border-b-1 border-black shadow-md shadow-black"
+        class="relative parralax border-b-1 border-black shadow-md shadow-black"
       >
         <!-- Description -->
         <div
@@ -77,24 +79,38 @@
             With the price on his head ever increasing, John Wick uncovers a
             path to defeating The High Table.
           </p>
-          <!-- Buttons -->
           <button
             class="bg-gray-800 bg-opacity-95 rounded-full p-3 font-semibold text-lg hover:-translate-y-1 duration-500"
           >
             More Information
           </button>
         </div>
+
         <!-- Buttons -->
         <div
-          class="absolute left-0 bottom-0 right-0 flex justify-center items-center text-white text-3xl font-semibold tracking-wider space-x-5 mb-5 z-10"
+          class="absolute left-0 bottom-0 right-0 flex flex-col justify-center items-center text-white text-3xl font-semibold tracking-wider mb-5 z-10"
         >
-          <div class="flex flex-col">
-            <a href="">Movies</a>
-            <div class="active"></div>
+          <!-- Change BG & DESCRIPTION -->
+          <div class="m-4">
+            <fieldset>
+              <input type="radio" name="movie" checked />
+              <input type="radio" name="movie" />
+              <input type="radio" name="movie" />
+              <input type="radio" name="movie" />
+              <input type="radio" name="movie" />
+            </fieldset>
           </div>
-          <div class="flex flex-col">
-            <a href="./shows.html">TV Shows</a>
-            <div class=""></div>
+
+          <!-- MENU -->
+          <div class="flex space-x-5">
+            <div class="flex flex-col">
+              <a href="">Movies</a>
+              <div class="active"></div>
+            </div>
+            <div class="flex flex-col">
+              <a href="./shows.html">TV Shows</a>
+              <div class=""></div>
+            </div>
           </div>
         </div>
       </div>

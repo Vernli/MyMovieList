@@ -426,6 +426,34 @@ html {
   background-color: #282828;
 }
 
+input[type="radio"]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -15px;
+  left: -1px;
+  position: relative;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  background-color: #111;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+input[type="radio"]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -15px;
+  left: -1;
+  position: relative;
+  background-color: #555;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: none;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -596,9 +624,25 @@ html {
   z-index: 50;
 }
 
+.m-4 {
+  margin: 1rem;
+}
+
+.m-1 {
+  margin: 0.25rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .mb-5 {
@@ -617,8 +661,16 @@ html {
   margin-top: 5rem;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-12 {
@@ -714,10 +766,6 @@ html {
 
 .bg-opacity-95 {
   --tw-bg-opacity: 0.95;
-}
-
-.bg-\[url\(\'\.\.\/images\/hero\.jpg\'\)\] {
-  background-image: url('../images/hero.jpg');
 }
 
 .p-3 {
