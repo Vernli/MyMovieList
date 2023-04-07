@@ -13,7 +13,6 @@
     />
     <!-- Fontawesome -->
     <link rel="stylesheet" href="./assets/css/fontawesome.min.css" />
-    <link rel="stylesheet" href="./assets/css/brands.min.css" />
     <link rel="stylesheet" href="./assets/css/solid.min.css" />
     <!-- Style -->
     <link rel="stylesheet" href="./styles/output.css" />
@@ -67,22 +66,11 @@
         class="relative parralax border-b-1 border-black shadow-md shadow-black"
       >
         <!-- Description -->
+        <div id="ytplayer"></div>
         <div
           id="descirption"
           class="absolute left-12 bottom-16 space-y-4 text-left text-white tracking-widest w-[30vw] z-10"
-        >
-          <h1 id="title" class="font-bold text-5xl">John Wick Chapter 4</h1>
-          <h2 id="category" class="font-semibold text-2xl">Movie</h2>
-          <p id="information" class="w-[25vw]">
-            With the price on his head ever increasing, John Wick uncovers a
-            path to defeating The High Table.
-          </p>
-          <button
-            class="bg-gray-800 bg-opacity-95 rounded-full p-3 font-semibold text-lg hover:-translate-y-1 duration-500"
-          >
-            More Information
-          </button>
-        </div>
+        ></div>
 
         <!-- Buttons -->
         <div
@@ -98,18 +86,6 @@
               <input type="radio" name="movie" value="5" />
             </fieldset>
           </div>
-
-          <!-- MENU -->
-          <div class="flex space-x-5">
-            <div class="flex flex-col">
-              <a href="">Movies</a>
-              <div class="active"></div>
-            </div>
-            <div class="flex flex-col">
-              <a href="./shows.html">TV Shows</a>
-              <div class=""></div>
-            </div>
-          </div>
         </div>
       </div>
     </header>
@@ -118,36 +94,18 @@
       <!-- Top 5 -->
       <div id="top-5">
         <h1 class="text-white p-5 font-semibold text-4xl text-center">
-          Top 5 Movies
+          Popular Five
         </h1>
-        <div class="w-full p-5 flex items-center justify-center space-x-5">
-          <div class="hover:scale-105 duration-200">
-            <img src="./images/image.jpg" alt="" />
-            <h3 class="w-full text-white bg-black text-center">Movie Title</h3>
-          </div>
-          <div class="hover:scale-105 duration-200">
-            <img src="./images/image.jpg" alt="" />
-            <h3 class="w-full text-white bg-black text-center">Movie Title</h3>
-          </div>
-          <div class="hover:scale-105 duration-200">
-            <img src="./images/image.jpg" alt="" />
-            <h3 class="w-full text-white bg-black text-center">Movie Title</h3>
-          </div>
-          <div class="hover:scale-105 duration-200">
-            <img src="./images/image.jpg" alt="" />
-            <h3 class="w-full text-white bg-black text-center">Movie Title</h3>
-          </div>
-          <div class="hover:scale-105 duration-200">
-            <img src="./images/image.jpg" alt="" />
-            <h3 class="w-full text-white bg-black text-center">Movie Title</h3>
-          </div>
-        </div>
+        <div
+          id="top-movies"
+          class="w-full p-5 flex items-center justify-center space-x-5"
+        ></div>
       </div>
 
       <!-- 20 -->
       <div id="movies" class="max-w-screen-xl mx-auto">
         <h1 class="text-white p-5 font-semibold text-4xl text-center">
-          Popular Movies
+          Now Playing
         </h1>
         <div class="w-full p-5 flex items-center justify-center space-x-5">
           <div class="hover:scale-105 duration-200">
