@@ -1,3 +1,4 @@
+const heroPagination = document.querySelector("#hero-pagination");
 const searchBtn = document.querySelector("#search-btn");
 
 const global = {
@@ -18,15 +19,12 @@ async function fetchAPIData(endpoint) {
   return data;
 }
 
-async function displayBackgroundImage() {
+async function displayBackgroundImage(n) {
   const { results } = await fetchAPIData("movie/popular");
-  console.log(results);
   const hero = document.querySelector("#hero");
-  hero.style.backgroundImage = `url('https://image.tmdb.org/t/p/original${results[0].backdrop_path}')`;
+  hero.style.backgroundImage = `url('https://image.tmdb.org/t/p/original${results[n].backdrop_path}')`;
   console.log(results[0].backdrop_path);
 }
-
-displayBackgroundImage();
 
 window.addEventListener("scroll", () => {
   const navBar = document.querySelector("#menu");
@@ -48,3 +46,16 @@ searchBtn.addEventListener(
   },
   { once: true }
 );
+
+window.addEventListener("DOMContentLoaded", () => {
+  const heroPageChecked =
+    document.querySelector("input[name='movie']:checked").value - 1;
+  displayBackgroundImage(heroPageChecked);
+});
+
+heroPagination.addEventListener("click", () => {
+  // .value - 1 - to get right movie index
+  const heroPageChecked =
+    document.querySelector("input[name='movie']:checked").value - 1;
+  displayBackgroundImage(heroPageChecked);
+});
