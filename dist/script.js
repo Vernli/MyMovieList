@@ -23,9 +23,11 @@ async function fetchAPIData(endpoint) {
 // Hero
 async function displayHeroMovie(heroMovieNumber) {
   const { results } = await fetchAPIData("movie/upcoming");
+  console.log(results);
   const hero = document.querySelector("#hero");
   hero.style.backgroundImage = `url('https://image.tmdb.org/t/p/original${results[heroMovieNumber].backdrop_path}')`;
   const heroDescription = hero.querySelector("#descirption");
+  // zmienic form button na linka a
   heroDescription.innerHTML = `
   <h1 id="title" class="font-bold text-5xl">${
     results[heroMovieNumber].original_title
@@ -36,9 +38,11 @@ async function displayHeroMovie(heroMovieNumber) {
           <p id="information" class="w-[25vw]">
             ${results[heroMovieNumber].overview.split(".", 2).join(".")}
           </p>
+          <form action="./movie-details.html" id="search-form">
           <button
             class="bg-gray-800 bg-opacity-95 rounded-full p-3 font-semibold text-lg hover:-translate-y-1 duration-500"
           >
+          </form>
             <a>More Information</a>
           </button>`;
 }

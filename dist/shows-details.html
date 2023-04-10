@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./assets/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/solid.min.css" />
+    <!-- Style -->
+    <link rel="stylesheet" href="./styles/output.css" />
+    <!-- Script -->
+    <script src="./script.js" defer></script>
+    <title>MyMovieList</title>
+  </head>
+
+  <body>
+    <header class="h-16">
+      <!-- Navigation Wrapper -->
+      <div class="flex flex-col w-screen">
+        <!-- Navigation Menu -->
+        <nav
+          id="menu"
+          class="flex justify-between p-6 text-gray-100 w-full z-50 fixed"
+        >
+          <!-- Interactive -->
+          <div id="left-menu-elements" class="space-x-4 ml-7 flex">
+            <button id="menu-btn">
+              <i class="fa-solid fa-bars fa-2x"></i>
+            </button>
+            <button id="search-btn">
+              <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+            </button>
+            <form action="./search.html" id="search-form">
+              <button type="submit" id="search-submit" class="hidden"></button>
+            </form>
+          </div>
+
+          <div class="flex space-x-3 tracking-wider text-white">
+            <div class="flex flex-col">
+              <a href="#">Movies</a>
+              <div class="active"></div>
+            </div>
+            <div class="flex flex-col">
+              <a href="./shows.html">TV Shows</a>
+              <div class=""></div>
+            </div>
+            <!-- User -->
+            <button id="user-btn" class="mr-7">
+              <i class="fa-solid fa-user-tie fa-2x"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="">
+      <div class="container p-8 mx-auto">
+        <div class="flex">
+          <img
+            src="./images/image.jpg"
+            alt=""
+            class="translate-x-10 hover:translate-x-0 duration-300 rounded-l-lg z-10"
+          />
+          <div class="p-4 bg-gray-300 rounded-r-lg z-50">
+            <h1>Movie Title</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quis
+              adipisci molestiae molestias dolorum in. Mollitia laudantium quam
+              impedit illum quos dolores consequuntur neque rem, molestias
+              ratione ut culpa eius consequatur tempora expedita accusantium non
+              quibusdam pariatur id magni autem!
+            </p>
+            <p>Release Date: 1999-06-10</p>
+            <p>Budget: 100M$</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="w-full bg-black h-12 text-white flex items-center justify-center absolute bottom-0"
+    ></footer>
+  </body>
+</html>
